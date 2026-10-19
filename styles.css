@@ -185,7 +185,13 @@ h1 {
 }
 
 @media (min-width: 1024px) {
-  .pagina { padding-top: 48px; padding-bottom: 48px; }
+  .pagina {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    justify-content: center;
+  }
+
+  .rodape { margin-top: 48px; }
 
   body::before,
   body::after {
