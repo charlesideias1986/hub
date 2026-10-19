@@ -63,8 +63,8 @@ if (enforced.every((f) => existsSync(p(f)))) {
 
 check(css.includes("prefers-reduced-motion"), "respeita reduced motion");
 check(css.includes(":focus-visible"), "foco visível");
-check(css.includes("--paper:#F3F1EC"), "token --paper");
-check(css.includes("--dim:#6E6960"), "token --dim");
+check(/--paper:\s*#F3F1EC/.test(css), "token --paper");
+check(/--dim:\s*#6E6960/.test(css), "token --dim");
 
 console.log(failures === 0 ? "\nTudo certo." : `\n${failures} falha(s).`);
 process.exit(failures === 0 ? 0 : 1);
